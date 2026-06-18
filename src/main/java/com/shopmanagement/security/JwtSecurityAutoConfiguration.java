@@ -27,8 +27,14 @@ public class JwtSecurityAutoConfiguration {
 
     @Bean
     @ConditionalOnMissingBean(EntitlementGate.class)
-    EntitlementGate remoteEntitlementGate(RestClient.Builder restClientBuilder, EntitlementGateProperties properties) {
-        return new RemoteEntitlementGateClient(restClientBuilder, properties);
+    EntitlementGate remoteEntitlementGate(
+            RestClient.Builder restClientBuilder,
+            EntitlementGateProperties entitlementProperties,
+            JwtSecurityProperties jwtSecurityProperties) {
+        if (entitlementProperties.getInternalApiKey().isBlank()) {
+            entitlementProperties.setInternalApiKey(jwtSecurityProperties.getInternalApiKey());
+        }
+        return new RemoteEntitlementGateClient(restClientBuilder, entitlementProperties);
     }
 
     @Bean
