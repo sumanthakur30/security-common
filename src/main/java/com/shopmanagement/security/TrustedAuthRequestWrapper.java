@@ -35,6 +35,15 @@ public class TrustedAuthRequestWrapper extends HttpServletRequestWrapper {
             if (incomingTenant != null) {
                 tenantId = incomingTenant;
             }
+        } else if ("SHOP_OWNER".equals(role)) {
+            String incomingShop = trimHeader(request.getHeader(SecurityHeaderNames.SHOP_ID));
+            if (incomingShop != null) {
+                shopId = incomingShop;
+            }
+            String incomingTenant = trimHeader(request.getHeader(SecurityHeaderNames.TENANT_ID));
+            if (incomingTenant != null) {
+                tenantId = incomingTenant;
+            }
         } else if (shopId == null) {
             shopId = trimHeader(request.getHeader(SecurityHeaderNames.SHOP_ID));
             tenantId = tenantId != null ? tenantId : trimHeader(request.getHeader(SecurityHeaderNames.TENANT_ID));

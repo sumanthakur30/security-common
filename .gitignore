@@ -4,3 +4,7 @@ target/
 .classpath
 .project
 .settings/
+
+.factorypath
+
+hs_err_pid*.log
