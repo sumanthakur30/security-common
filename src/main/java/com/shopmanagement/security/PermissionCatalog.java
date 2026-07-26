@@ -28,6 +28,18 @@ public final class PermissionCatalog {
             "VIEW_PATIENT_HISTORY",
             "MANAGE_LAB_ORDERS",
             "MANAGE_LAB_RESULTS",
+            /** Pathologist / senior tech: e-sign and release lab reports. */
+            "RELEASE_LAB_REPORTS",
+            /** Analyzer registry + channel map + import console. */
+            "MANAGE_LAB_INSTRUMENTS",
+            /** IQC lots, Westgard runs, lockouts, reagent rules, CC settlement. */
+            "MANAGE_LAB_QC",
+            /** CC / franchise nodes + home collection GPS routes. */
+            "MANAGE_LAB_NETWORK",
+            /** Microbiology cultures/AST + histopathology workflow. */
+            "MANAGE_LAB_SPECIALTY",
+            /** AI draft assist, FHIR export, ABHA patient links. */
+            "MANAGE_LAB_ECOSYSTEM",
             "DISPENSE_MEDICINES",
             "IMPORT_PRODUCTS",
             "EXPORT_PRODUCTS",
