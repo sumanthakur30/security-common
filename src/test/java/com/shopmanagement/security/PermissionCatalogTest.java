@@ -29,5 +29,7 @@ class PermissionCatalogTest {
     @Test
     void ownerGetsFullCatalog() {
         assertEquals(PermissionCatalog.ALL.size(), PermissionCatalog.defaultsForRole("SHOP_OWNER").size());
+        assertTrue(PermissionCatalog.ALL.contains("BILL_DELETE"));
+        assertTrue(PermissionCatalog.ALL.contains("PRODUCT_VIEW_PURCHASE_RATE"));
     }
 }

@@ -49,7 +49,13 @@ public final class PermissionCatalog {
             "PROCUREMENT_APPROVE",
             "PROCUREMENT_FINANCE",
             "MANAGE_FINANCE",
-            "MANAGE_GST");
+            "MANAGE_GST",
+            "BILL_VIEW",
+            "BILL_CREATE",
+            "BILL_EDIT",
+            "BILL_DELETE",
+            "PRODUCT_VIEW_PURCHASE_RATE",
+            "PRODUCT_EDIT_PURCHASE_RATE");
 
     private static final Set<String> ALL_SET = Set.copyOf(ALL);
 
