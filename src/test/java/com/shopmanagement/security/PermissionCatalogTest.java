@@ -31,5 +31,8 @@ class PermissionCatalogTest {
         assertEquals(PermissionCatalog.ALL.size(), PermissionCatalog.defaultsForRole("SHOP_OWNER").size());
         assertTrue(PermissionCatalog.ALL.contains("BILL_DELETE"));
         assertTrue(PermissionCatalog.ALL.contains("PRODUCT_VIEW_PURCHASE_RATE"));
+        assertTrue(PermissionCatalog.ALL.contains("MARKETPLACE_VIEW"));
+        assertTrue(PermissionCatalog.defaultsForRole("SHOP_EMPLOYEE").contains("MANAGE_ORDERS"));
+        assertTrue(!PermissionCatalog.defaultsForRole("SHOP_EMPLOYEE").contains("MARKETPLACE_CONNECT"));
     }
 }
