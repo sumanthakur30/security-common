@@ -55,7 +55,17 @@ public final class PermissionCatalog {
             "BILL_EDIT",
             "BILL_DELETE",
             "PRODUCT_VIEW_PURCHASE_RATE",
-            "PRODUCT_EDIT_PURCHASE_RATE");
+            "PRODUCT_EDIT_PURCHASE_RATE",
+            "MARKETPLACE_VIEW",
+            "MARKETPLACE_MANAGE",
+            "MARKETPLACE_CONNECT",
+            "MARKETPLACE_SYNC",
+            "MARKETPLACE_ORDER_VIEW",
+            "MARKETPLACE_ORDER_MANAGE",
+            "MARKETPLACE_PRODUCT_MAPPING",
+            "MARKETPLACE_INVENTORY_SYNC",
+            "MARKETPLACE_PRICE_SYNC",
+            "MARKETPLACE_SETTLEMENT_VIEW");
 
     private static final Set<String> ALL_SET = Set.copyOf(ALL);
 
